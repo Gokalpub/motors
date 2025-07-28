@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gaziantep Motorsiklet Uzmanlık Merkezi | Profesyonel Bakım ve Onarım</title>
+    <meta name="description" content="Gaziantep'in önde gelen motorsiklet uzmanlık merkezi. Detaylı periyodik bakımdan ileri düzey motor onarımına, lastik yönetiminden elektrik sistemlerine kadar motorsikletiniz için profesyonel çözümler.">
+    <meta name="keywords" content="Gaziantep motorsiklet servisi, motorsiklet tamir, motorsiklet bakım, Gaziantep Yamaha servis, Gaziantep Honda servis, Gaziantep Kawasaki servis, Gaziantep Suzuki servis, motorsiklet lastik, motorsiklet yağ değişimi, motorsiklet arıza, Gaziantep motor revizyon, motorsiklet diagnostik, motorsiklet periyodik bakım, Gaziantep motor yol yardım, motorsiklet uzmanı, profesyonel motorsiklet servis">
+    <meta name="author" content="Gaziantep Motorsiklet Uzmanlık Merkezi">
+    <link rel="canonical" href="http://www.gaziantepmotorsiklets.com/"> 
+    
+    <meta property="og:title" content="Gaziantep Motorsiklet Uzmanlık Merkezi | Profesyonel Bakım ve Onarım">
+    <meta property="og:description" content="Gaziantep'in önde gelen motorsiklet uzmanlık merkezi. Detaylı periyodik bakımdan ileri düzey motor onarımına, lastik yönetiminden elektrik sistemlerine kadar motorsikletiniz için profesyonel çözümler.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="http://www.gaziantepmotorsiklets.com/"> 
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/B71C1C/FFFFFF?text=Motorsiklet+Uzmanligi"> 
+    <meta property="og:locale" content="tr_TR">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Oswald:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+        /* Genel Stil Ayarları */
+        :root {
+            --primary-color: #E53935; /* Canlı Kırmızı - Dinamizm */
+            --secondary-color: #263238; /* Koyu Gri Mavi - Derinlik ve Sağlamlık */
+            --accent-color: #FFC107; /* Amber - Vurgu ve Enerji */
+            --light-bg: #ECEFF1; /* Açık Gri - Ferahlık */
+            --dark-bg: #1A2024; /* Çok Koyu Mavi Gri - Header, Footer */
+            --text-light: #F8F8F8; /* Açık Metinler */
+            --text-dark: #37474F; /* Koyu Metinler - Sade Okunabilirlik */
+            --font-primary: 'Roboto', sans-serif; /* Sade, modern ve okunabilir font */
+            --font-secondary: 'Oswald', sans-serif; /* Başlıklar için güçlü, kompakt font */
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            line-height: 1.7; 
+            color: var(--text-dark);
+            background-color: var(--light-bg);
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased; /* Fontları daha pürüzsüz yapar */
+            text-rendering: optimizeLegibility; /* Okunabilirliği artırır */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px; 
+        }
+
+        a {
+            text-decoration: none;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--accent-color);
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* Butonlar */
+        .btn-primary {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--text-light);
+            padding: 15px 30px; 
+            border-radius: 8px; 
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25); 
+            font-family: var(--font-primary); 
+            font-size: 1em; 
+        }
+
+        .btn-primary:hover {
+            background-color: #C62828; 
+            transform: translateY(-3px); 
+            box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+        }
+
+        .btn-secondary {
+            display: inline-block;
+            background: var(--accent-color);
+            color: var(--secondary-color); 
+            padding: 15px 30px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.2px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            font-family: var(--font-primary);
+            font-size: 1em;
+        }
+
+        .btn-secondary:hover {
+            background-color: #FFD54F; 
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0,0,0,0.35);
+        }
+
+        /* Header */
+        header {
+            background: var(--dark-bg);
+            color: var(--text-light);
+            padding: 18px 0; 
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.4); 
+            border-bottom: 3px solid var(--primary-color); 
+        }
+
+        header .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 65px; /* Logo boyutunu sadeleştirdim */
+            transition: transform 0.4s ease-out; 
+            filter: drop-shadow(0 0 8px var(--primary-color)); 
+        }
+        .logo:hover img {
+            transform: scale(1.05); 
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+        }
+
+        nav ul li {
+            margin-left: 35px; 
+        }
+
+        nav ul li a {
+            color: var(--text-light);
+            font-weight: 500; /* Daha sade font kalınlığı */
+            transition: color 0.3s ease, transform 0.2s ease;
+            position: relative;
+            padding-bottom: 8px; 
+            font-family: var(--font-primary); /* Sade menü fontu */
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            font-size: 0.95em; 
+        }
+
+        nav ul li a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 4px; 
+            background-color: var(--accent-color); 
+            left: 50%; 
+            transform: translateX(-50%);
+            bottom: 0;
+            transition: width 0.3s cubic-bezier(0.86, 0, 0.07, 1); 
+        }
+
+        nav ul li a:hover {
+            color: var(--accent-color); 
+            transform: translateY(-3px);
+        }
+        nav ul li a:hover::after {
+            width: 100%;
+        }
+
+        .hamburger-menu {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-light);
+            font-size: 35px; 
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .hamburger-menu:hover {
+            transform: scale(1.1); 
+        }
+
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://via.placeholder.com/1920x800/212121/FFFFFF?text=Motorsiklet+Performans') no-repeat center center/cover;
+            color: var(--text-light);
+            text-align: center;
+            padding: 150px 20px; 
+            min-height: 80vh; 
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--primary-color); 
+        }
+        .hero-section::before { 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjAiIGhlaWdodD0iMjAiIHZpZXdCb3g9IjAgMCAyMCAyMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSIyMCIgaGVpZ2h0PSIyMCIgZmlsbD0iIzAwMDAwMCIvPgogICAgPGNpcmNsZSBjeD0iNSIgY3k9IjUiIHI9IjAuNyIgZmlsbD0iIzQ0NDQ0NCIvPgogICAgPGNpcmNsZSBjeD0iMTUiIGN5PSI1IiByPSIwLjciIGZpbGw9IiM0NDQ0NDQiLz4KICAgIDxjaXJjbGUgY3g9IjUiIGN5PSIxNSIgcj0iMC43IiBmaWxsPSIjNDQ0NDQ0Ii8+CiAgICA8Y2lyY2xlIGN4PSIxNSIgY3k9IjE1IiByPSIwLjciIGZpbGw9IiM0NDQ0NDQiLz4KPC9zdmc+');
+            background-size: 20px 20px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            animation: fadeInScale 1.2s ease-out forwards; 
+            opacity: 0;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-secondary);
+            font-size: 3.8em; /* Daha sade font boyutu */
+            margin-bottom: 25px;
+            text-shadow: 3px 3px 8px rgba(0,0,0,0.7); 
+            line-height: 1.2;
+            font-weight: 600;
+            color: var(--accent-color); 
+            text-transform: uppercase;
+        }
+
+        .hero-content p {
+            font-size: 1.4em; /* Daha sade font boyutu */
+            margin-bottom: 45px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
+            font-weight: 300; /* Daha ince font */
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* Section Başlıkları */
+        section h2 {
+            font-family: var(--font-secondary);
+            font-size: 3em; /* Daha sade font boyutu */
+            text-align: center;
+            margin-bottom: 70px; 
+            color: var(--secondary-color);
+            position: relative;
+            padding-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px; 
+            font-weight: 600;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+        }
+
+        section h2::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 120px; 
+            height: 5px; 
+            background-color: var(--primary-color);
+            border-radius: 3px;
+        }
+
+        /* Services Section */
+        .services-section {
+            padding: 100px 0; 
+            background-color: var(--light-bg);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .services-section::before { 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px; 
+            background: linear-gradient(to bottom right, var(--dark-bg) 50%, transparent 50%);
+            background-size: 100% 100%;
+            transform: skewY(-1.5deg); 
+            transform-origin: top left;
+            z-index: 1;
+        }
+         .services-section::after { 
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: linear-gradient(to top right, var(--secondary-color) 50%, transparent 50%); 
+            background-size: 100% 100%;
+            transform: skewY(-1.5deg);
+            transform-origin: bottom right;
+            z-index: 1;
+        }
+
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 40px; 
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .service-item {
+            background: var(--text-light);
+            padding: 35px; 
+            border-radius: 15px; 
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15); 
+            transition: transform 0.4s ease, box-shadow 0.4s ease, background-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(0,0,0,0.08); 
+            overflow: hidden; 
+            position: relative;
+        }
+        .service-item::before { 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(255,255,255,0.03) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.03) 75%, transparent 75%, transparent);
+            background-size: 15px 15px;
+            opacity: 0.1;
+            z-index: 0;
+        }
+
+        .service-item:hover {
+            transform: translateY(-15px); 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.25);
+            background-color: #FDFDFD;
+        }
+
+        .service-item i {
+            font-size: 5em; 
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            animation: pulse 1.5s infinite alternate ease-in-out; 
+            filter: drop-shadow(0 0 10px rgba(229,57,53,0.6)); 
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(229,57,53,0.5)); }
+            100% { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(229,57,53,0.8)); }
+        }
+
+        .service-item h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.8em; /* Daha sade font boyutu */
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .service-item p {
+            color: var(--text-dark);
+            font-size: 1em; /* Daha sade font boyutu */
+            line-height: 1.7;
+            font-weight: 400; /* Daha sade font kalınlığı */
+        }
+
+        /* Why Us Section */
+        .why-us-section {
+            background-color: var(--secondary-color);
+            color: var(--text-light);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            border-bottom: 4px solid var(--primary-color); 
+            overflow: hidden;
+        }
+         .why-us-section::before { 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: linear-gradient(to top left, var(--light-bg) 50%, transparent 50%);
+            background-size: 100% 100%;
+            transform: skewY(-1.5deg);
+            transform-origin: bottom left;
+            z-index: 1;
+        }
+        .why-us-section::after { 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iIzEwMTMxNiIvPgogICAgPGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjEuMiIgZmlsbD0iIzM0NDk1RTkiIG9wYWNpdHk9IjAuMiIvPgogICAgPGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjAuNiIgZmlsbD0iIzQ2NjQ2RSIgb3BhY2l0eT0iMC4zIi8+CiAgICA8L3N2Zz4=');
+            background-size: 6px 6px;
+            opacity: 0.2; 
+            z-index: 0;
+        }
+
+        .why-us-section h2 {
+            color: var(--text-light);
+        }
+
+        .why-us-section h2::after {
+            background-color: var(--primary-color);
+        }
+
+        .why-us-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 40px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .why-us-item {
+            background: #37474F; /* Koyu arka plan */
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.3); 
+            transition: transform 0.4s ease, background-color 0.3s ease, box-shadow 0.4s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .why-us-item:hover {
+            transform: translateY(-15px);
+            background-color: #455A64; 
+            box-shadow: 0 15px 35px rgba(0,0,0,0.45);
+        }
+
+        .why-us-item i {
+            font-size: 5em;
+            color: var(--accent-color); 
+            margin-bottom: 25px;
+            filter: drop-shadow(0 0 10px rgba(255,193,7,0.6)); 
+        }
+
+        .why-us-item h3 {
+            font-family: var(--font-secondary);
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            font-weight: 600;
+            color: var(--accent-color); 
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+        }
+
+        .why-us-item p {
+            color: #CFD8DC; /* Açık gri metin */
+            font-size: 1em;
+            line-height: 1.7;
+            font-weight: 300;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+         .contact-section::before { 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 70px;
+            background: linear-gradient(to bottom left, var(--secondary-color) 50%, transparent 50%);
+            background-size: 100% 100%;
+            transform: skewY(-1.5deg);
+            transform-origin: top right;
+            z-index: 1;
+        }
+         .contact-section::after { 
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iOCIgaGVpZ2h0PSI4IiB2aWV3Qm94PSIwIDAgOCA4IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHJlY3Qgd2lkdGg9IjgiIGhlaWdodD0iOCIgZmlsbD0iIzEwMTIxNiIvPgogICAgPHBhdGggZD0iTTcgMCBoMVY4SDBWN0gxVjBDMy44NzQ0NzY5IDYuMTgyMTczNCw3LjU1MzY0Nzc2IDcuMTUyNjIzNDcsOCA3VjBINzNaIiBmaWxsPSIjMjIyNzNCIi8+Cjwvc3ZnPg==');
+            background-size: 8px 8px;
+            opacity: 0.3; 
+            z-index: 0;
+        }
+
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 60px; 
+            margin-bottom: 60px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+            max-width: 550px;
+            text-align: left;
+            background: rgba(0,0,0,0.3); 
+            padding: 40px; 
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5); 
+            border: 1px solid rgba(255,255,255,0.15); 
+        }
+
+        .contact-info h3 {
+            font-family: var(--font-secondary);
+            font-size: 2.5em; 
+            margin-bottom: 30px;
+            color: var(--primary-color);
+            text-align: center;
+            position: relative;
+            padding-bottom: 15px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+        }
+        .contact-info h3::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .contact-info p {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            font-size: 1.1em; 
+            line-height: 1.6;
+            transition: color 0.3s ease;
+            color: white; 
+            font-weight: 300;
+        }
+        .contact-info p:last-child {
+            margin-bottom: 0;
+        }
+        .contact-info p:hover {
+            color: var(--primary-color);
+        }
+
+        .contact-info p i {
+            margin-right: 15px; 
+            color: white; 
+            font-size: 1.6em; 
+            flex-shrink: 0;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+        .contact-info p:hover i {
+            transform: scale(1.1) rotate(3deg);
+            filter: drop-shadow(0 0 8px rgba(255,193,7,0.5));
+        }
+        .contact-info p a {
+            color: white; 
+            transition: color 0.3s ease;
+        }
+        .contact-info p a:hover {
+            color: var(--primary-color);
+        }
+
+
+        .map-container {
+            width: 100%;
+            height: 450px; 
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.6); 
+            margin-top: 70px;
+            border: 2px solid rgba(255,255,255,0.18);
+        }
+
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg); 
+            color: #B0BEC5; 
+            text-align: center;
+            padding: 40px 0; 
+            font-size: 0.95em;
+            border-top: 3px solid var(--primary-color);
+            font-family: var(--font-primary);
+            letter-spacing: 0.8px;
+        }
+
+        /* Modal Stil Ayarları */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1001;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.85); 
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+            backdrop-filter: blur(6px); 
+        }
+
+        .modal-content {
+            background-color: var(--light-bg);
+            margin: auto;
+            padding: 40px; 
+            border-radius: 15px;
+            width: 90%;
+            max-width: 600px; 
+            box-shadow: 0 12px 40px rgba(0,0,0,0.5); 
+            position: relative;
+            animation: fadeIn 0.4s ease-out;
+            color: var(--text-dark);
+            border: 1px solid rgba(0,0,0,0.1);
+        }
+
+        .modal-content h2 {
+            font-family: var(--font-secondary);
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-align: center;
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+
+        .modal-content form label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            color: var(--secondary-color);
+            font-size: 1em;
+        }
+
+        .modal-content form input[type="text"],
+        .modal-content form input[type="email"],
+        .modal-content form input[type="tel"],
+        .modal-content form input[type="date"],
+        .modal-content form input[type="time"],
+        .modal-content form select,
+        .modal-content form textarea {
+            width: 100%;
+            padding: 14px; 
+            margin-bottom: 20px;
+            border: 1px solid #B0BEC5; 
+            border-radius: 8px;
+            font-size: 0.95em;
+            color: var(--text-dark);
+            background-color: #fff;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .modal-content form input:focus,
+        .modal-content form select:focus,
+        .modal-content form textarea:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.2); 
+            outline: none;
+        }
+        .modal-content form textarea {
+            resize: vertical;
+            min-height: 100px; 
+        }
+
+        .modal-content form button {
+            width: 100%;
+            font-size: 1.2em;
+            padding: 16px; 
+            margin-top: 15px;
+        }
+
+        .close-button {
+            color: #FFC107; 
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 40px; 
+            font-weight: bold;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: var(--primary-color); 
+            transform: rotate(90deg) scale(1.05); 
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-40px) scale(0.95); }
+            to { opacity: 1; transform: translateY(0) scale(1); }
+        }
+
+        @keyframes fadeInScale {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Responsive Tasarım */
+        @media (max-width: 768px) {
+            header .container {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .logo img { 
+                height: 55px;
+                margin-bottom: 10px;
+            }
+
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background: var(--dark-bg);
+                position: absolute;
+                top: 85px; 
+                left: 0;
+                padding: 20px 0;
+                box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            }
+
+            nav ul.active {
+                display: flex;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+            nav ul li a::after {
+                width: 0 !important;
+            }
+
+            .hamburger-menu {
+                display: block;
+                position: absolute;
+                right: 20px;
+                top: 20px;
+            }
+
+            .hero-content h1 {
+                font-size: 2.8em;
+            }
+
+            .hero-content p {
+                font-size: 1.2em;
+            }
+
+            section h2 {
+                font-size: 2.4em;
+                margin-bottom: 40px;
+            }
+            section h2::after {
+                width: 90px;
+                height: 4px;
+            }
+
+            .services-section, .why-us-section, .contact-section {
+                padding: 70px 0;
+            }
+            .services-section::before, .services-section::after,
+            .why-us-section::before, .contact-section::before {
+                height: 50px; 
+            }
+
+            .service-item, .why-us-item {
+                padding: 25px;
+            }
+            .service-item i, .why-us-item i {
+                font-size: 4em;
+            }
+            .service-item h3, .why-us-item h3 {
+                font-size: 1.6em;
+            }
+            .service-item p, .why-us-item p {
+                font-size: 0.95em;
+            }
+
+            .contact-content {
+                flex-direction: column;
+                gap: 40px;
+            }
+            .contact-info {
+                padding: 30px;
+            }
+            .contact-info h3 {
+                font-size: 2em;
+                margin-bottom: 25px;
+            }
+            .contact-info p {
+                font-size: 1em;
+            }
+            .contact-info p i {
+                font-size: 1.4em;
+            }
+            .map-container {
+                height: 350px;
+                margin-top: 50px;
+            }
+
+            .modal-content {
+                padding: 30px;
+            }
+            .modal-content h2 {
+                font-size: 2em;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2.2em;
+            }
+            .hero-content p {
+                font-size: 1em;
+            }
+            section h2 {
+                font-size: 2em;
+            }
+            .service-item, .why-us-item {
+                padding: 20px;
+            }
+            .service-item i, .why-us-item i {
+                font-size: 3.5em;
+            }
+            .modal-content {
+                padding: 25px;
+            }
+            .close-button {
+                font-size: 35px;
+                top: 15px;
+                right: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="#hero" aria-label="Ana Sayfa">
+                    <img src="https://i.hizliresim.com/anc325k.png?_gl=1*1775g93*_ga*Mjk3NDk0MjcxLjE3NTM3NDMxMDA.*_ga_M9ZRXYS2YN*czE3NTM3NDQ3MjUkajkkbDAkaDA." alt="Gaziantep Motorsiklet Uzmanlık Merkezi Logosu">
+                </a>
+            </div>
+            <nav>
+                <button class="hamburger-menu" aria-label="Menü Aç/Kapat">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-list">
+                    <li><a href="#hero">Ana Sayfa</a></li>
+                    <li><a href="#services">Hizmetlerimiz</a></li>
+                    <li><a href="#why-us">Neden Biz?</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                    <li><a href="#" class="btn-primary" id="randevuBtn">Randevu Oluşturun</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="hero-section">
+            <div class="hero-content">
+                <h1>Gaziantep Motorsiklet Uzmanlık Merkezi: Performans ve Güvenli Sürüş İçin Adresiniz</h1>
+                <p>Her motorsiklet bir tutkudur. Aracınızın **üst düzey performansını ve yol güvenliğini** sağlamak için Gaziantep'te **profesyonel bakım ve onarım çözümleriyle** yanınızdayız.</p>
+                <a href="#services" class="btn-secondary">Uzman Hizmetlerimizi Keşfedin</a>
+            </div>
+        </section>
+
+        <section id="services" class="services-section container">
+            <h2>Hizmetlerimiz</h2>
+            <div class="service-grid">
+                <div class="service-item">
+                    <i class="fas fa-motorcycle"></i>
+                    <h3>Periyodik Bakım</h3>
+                    <p>**Motorsikletinizin ömrünü uzatır.** Üretici standartlarında, detaylı ve titiz periyodik bakımlarla aracınızın performansını ve güvenilirliğini en üst seviyede tutuyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-tire"></i>
+                    <h3>Lastik Yönetimi</h3>
+                    <p>**Yol tutuşu ve sürüş güvenliği sağlar.** Profesyonel lastik değişimi, hassas balans ayarı ve kapsamlı kontrollerle yolculuklarınızda maksimum güvenlik sunuyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-diagnoses"></i>
+                    <h3>Arıza Tespiti ve Onarım</h3>
+                    <p>**Sorunlara kesin çözüm sunar.** Son teknoloji diagnostik ekipmanlarımız ve uzman ekibimizle her türlü arızayı doğru tespit edip kalıcı çözümler üretiyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-oil-can"></i>
+                    <h3>Yağ ve Filtre Değişimi</h3>
+                    <p>**Motorunuzun kalbini korur.** Motorsikletinize özel, yüksek kaliteli yağlar ve orijinal filtreler kullanarak motorunuzun verimli ve sağlıklı çalışmasını sağlıyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-car-battery"></i>
+                    <h3>Akü Kontrol ve Değişim</h3>
+                    <p>**Kesintisiz bir başlangıç sunar.** Akü sisteminizi modern cihazlarla analiz ediyor, gerekirse güvenilir ve performanslı akülerle değişimini yapıyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Orijinal Parça Montajı</h3>
+                    <p>**Performansı ve değeri korur.** Aşınmış parçaları, üretici onaylı orijinal veya eşdeğer kalitede yedek parçalarla, titizlikle değiştiriyor ve monte ediyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3>Aydınlatma ve Sinyal Sistemleri</h3>
+                    <p>**Yollarda görünürlüğünüzü artırır.** Far, sinyal ve stop lambalarının kontrolünü, ayarını ve onarımını yaparak gece sürüşlerinizde maksimum güvenlik sağlıyoruz.</p>
+                </div>
+                <div class="service-item">
+                    <i class="fas fa-wrench"></i>
+                    <h3>Aksesuar Entegrasyonu ve Özelleştirme</h3>
+                    <p>**Motorsikletinizi size özel kılar.** Tüm aksesuarlarınızın güvenli ve estetik montajını yapıyor, motorsikletinizi kişisel tarzınıza uygun şekilde özelleştirmenize yardımcı oluyoruz.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="why-us" class="why-us-section">
+            <div class="container">
+                <h2>Neden Bizi Tercih Etmelisiniz?</h2>
+                <div class="why-us-grid">
+                    <div class="why-us-item">
+                        <i class="fas fa-helmet-safety"></i>
+                        <h3>Uzman Teknik Kadro</h3>
+                        <p>**Yılların deneyimi ve sürekli eğitim.** Motorsikletler konusunda uzmanlaşmış, sektördeki gelişmeleri yakından takip eden sertifikalı teknisyen ekibimizle hizmet veriyoruz.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Güvenilir ve Şeffaf Hizmet</h3>
+                        <p>**Her zaman dürüstlük ve açıklık.** Tüm süreçlerde şeffaflığı esas alıyor, işlemler öncesi ve sonrası sizi detaylıca bilgilendirerek güveninizi kazanıyoruz.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <h3>Hızlı ve Etkin Çözümler</h3>
+                        <p>**Zamanınız bizim için değerli.** Modern diagnostik cihazlarımız ve optimize edilmiş iş akışımızla sorunları hızla çözüyor, motorsikletinizi en kısa sürede yola hazır hale getiriyoruz.</p>
+                    </div>
+                    <div class="why-us-item">
+                        <i class="fas fa-star"></i>
+                        <h3>Müşteri Memnuniyeti Odaklı</h3>
+                        <p>**Sizin memnuniyetiniz önceliğimiz.** Her müşterimizin beklentilerini aşmayı hedefliyor, motorsikletinizle ilgili her konuda en iyi deneyimi yaşatmayı amaçlıyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <h2>İletişim</h2>
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <h3>Bize Ulaşın</h3>
+                        <p><i class="fas fa-map-marker-alt"></i> Adres: Örnek Mahallesi, Motorsiklet Caddesi No:12, Şehitkamil/Gaziantep, Türkiye</p>
+                        <p><i class="fas fa-phone-alt"></i> <a href="tel:+905XX XXX XX XX">+90 5XX XXX XX XX</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@gaziantepmotorsiklets.com">info@gaziantepmotorsiklets.com</a></p>
+                        <p><i class="fas fa-clock"></i> Çalışma Saatleri: Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                    </div>
+                </div>
+                <div class="map-container">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3183.0000000000005!2d37.388888!3d37.066667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzdEMzAnNTkuOSJOIDM3w7IyMycyLjAiRQ!5e0!3m2!1str!2str!4v1625000000000!5m2!1str!2str" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Gaziantep Motorsiklet Uzmanlık Merkezi. Tüm Hakları Saklıdır.</p>
+        </div>
+    </footer>
+
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">×</span>
+            <h2>Online Randevu Oluşturun</h2>
+            <form id="appointmentForm">
+                <label for="motorBrand">Motorsiklet Markası:</label>
+                <input type="text" id="motorBrand" placeholder="Örn: Honda, Yamaha, Kawasaki" required>
+
+                <label for="motorModel">Motorsiklet Modeli:</label>
+                <input type="text" id="motorModel" placeholder="Örn: CBR1000RR, MT-07, Ninja 400" required>
+
+                <label for="serviceType">Talep Edilen Hizmet Kategorisi:</label>
+                <select id="serviceType" required>
+                    <option value="">Lütfen seçiniz</option>
+                    <option value="Periyodik Bakım">Periyodik Bakım</option>
+                    <option value="Lastik Yönetimi">Lastik Yönetimi</option>
+                    <option value="Arıza Tespiti ve Onarım">Arıza Tespiti ve Onarım</option>
+                    <option value="Yağ ve Filtre Değişimi">Yağ ve Filtre Değişimi</option>
+                    <option value="Akü Kontrol ve Değişim">Akü Kontrol ve Değişim</option>
+                    <option value="Orijinal Parça Montajı">Orijinal Parça Montajı</option>
+                    <option value="Aydınlatma ve Sinyal Sistemleri">Aydınlatma ve Sinyal Sistemleri</option>
+                    <option value="Aksesuar Entegrasyonu ve Özelleştirme">Aksesuar Entegrasyonu ve Özelleştirme</option>
+                    <option value="Diğer (Lütfen belirtin)">Diğer (Lütfen belirtin)</option>
+                </select>
+                <textarea id="otherServiceDetails" placeholder="Diğer hizmet talebinizi veya özel notlarınızı buraya yazınız." style="display:none;"></textarea>
+
+                <label for="preferredDate">Tercih Edilen Randevu Tarihi:</label>
+                <input type="date" id="preferredDate" required>
+
+                <label for="preferredTime">Tercih Edilen Randevu Saat Aralığı:</label>
+                <input type="time" id="preferredTime" required>
+
+                <label for="customerName">Adınız Soyadınız:</label>
+                <input type="text" id="customerName" required>
+
+                <label for="customerPhone">Telefon Numaranız:</label>
+                <input type="tel" id="customerPhone" placeholder="Örn: 05XX XXX XX XX" required>
+
+                <label for="customerEmail">E-posta Adresiniz:</label>
+                <input type="email" id="customerEmail" placeholder="e-posta@adresiniz.com" required>
+
+                <button type="submit" class="btn-primary">Randevu Talebini Gönder</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger-menu');
+            const navList = document.querySelector('.nav-list');
+            const randevuBtn = document.getElementById('randevuBtn');
+            const appointmentModal = document.getElementById('appointmentModal');
+            const closeButton = document.querySelector('.modal .close-button');
+            const appointmentForm = document.getElementById('appointmentForm');
+            const serviceTypeSelect = document.getElementById('serviceType');
+            const otherServiceDetails = document.getElementById('otherServiceDetails');
+
+            // Hamburger Menü İşlevselliği
+            if (hamburger && navList) {
+                hamburger.addEventListener('click', function() {
+                    navList.classList.toggle('active');
+                });
+            }
+
+            // Menü öğelerine tıklayınca menüyü kapatma (mobil için)
+            navList.querySelectorAll('a').forEach(item => {
+                item.addEventListener('click', () => {
+                    if (navList.classList.contains('active')) {
+                        navList.classList.remove('active');
+                    }
+                });
+            });
+
+            // Randevu Modalını Açma
+            if (randevuBtn && appointmentModal) {
+                randevuBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    appointmentModal.style.display = 'flex';
+                });
+            }
+
+            // Randevu Modalını Kapatma (X butonu)
+            if (closeButton && appointmentModal) {
+                closeButton.addEventListener('click', function() {
+                    appointmentModal.style.display = 'none';
+                });
+            }
+
+            // Randevu Modalını Kapatma (Modal dışına tıklayınca)
+            if (appointmentModal) {
+                window.addEventListener('click', function(event) {
+                    if (event.target == appointmentModal) {
+                        appointmentModal.style.display = 'none';
+                    }
+                });
+            }
+
+            // "Diğer" hizmet türü seçildiğinde ek metin alanını gösterme
+            if (serviceTypeSelect && otherServiceDetails) {
+                serviceTypeSelect.addEventListener('change', function() {
+                    if (this.value === 'Diğer (Lütfen belirtin)') {
+                        otherServiceDetails.style.display = 'block';
+                        otherServiceDetails.setAttribute('required', 'required');
+                    } else {
+                        otherServiceDetails.style.display = 'none';
+                        otherServiceDetails.removeAttribute('required');
+                        otherServiceDetails.value = '';
+                    }
+                });
+            }
+
+            // Randevu Formu Gönderme (Örnek: Sadece konsola yazdırır)
+            if (appointmentForm) {
+                appointmentForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    
+                    const formData = {
+                        motorBrand: document.getElementById('motorBrand').value,
+                        motorModel: document.getElementById('motorModel').value,
+                        serviceType: document.getElementById('serviceType').value,
+                        otherServiceDetails: document.getElementById('otherServiceDetails').value,
+                        preferredDate: document.getElementById('preferredDate').value,
+                        preferredTime: document.getElementById('preferredTime').value,
+                        customerName: document.getElementById('customerName').value,
+                        customerPhone: document.getElementById('customerPhone').value,
+                        customerEmail: document.getElementById('customerEmail').value
+                    };
+
+                    console.log('Randevu Talebi:', formData);
+                    alert('Randevu talebiniz başarıyla alındı! En kısa sürede sizinle iletişime geçeceğiz. Gaziantep Motorsiklet Uzmanlık Merkezi.');
+                    appointmentForm.reset();
+                    appointmentModal.style.display = 'none';
+                    otherServiceDetails.style.display = 'none';
+                    otherServiceDetails.removeAttribute('required');
+                });
+            }
+
+            // Scroll animasyonları
+            const sections = document.querySelectorAll('section');
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    } else {
+                        // Animasyon sadece bir kere çalışsın, tekrar dışarı çıkınca eski haline dönmesin
+                    }
+                });
+            }, observerOptions);
+
+            sections.forEach(section => {
+                if (section.id !== 'hero') {
+                    section.style.opacity = '0';
+                    section.style.transform = 'translateY(40px)'; 
+                    section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out'; 
+                }
+                observer.observe(section);
+            });
+        });
+    </script>
+</body>
+</html>

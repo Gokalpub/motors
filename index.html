@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gaziantep Motorsiklet Uzmanlık Merkezi | Profesyonel Bakım ve Onarım</title>
-    <meta name="description" content="Gaziantep'in önde gelen motorsiklet uzmanlık merkezi. Detaylı periyodik bakımdan ileri düzey motor onarımına, lastik yönetiminden elektrik sistemlerine kadar motorsikletiniz için profesyonel çözümler.">
-    <meta name="keywords" content="Gaziantep motorsiklet servisi, motorsiklet tamir, motorsiklet bakım, Gaziantep Yamaha servis, Gaziantep Honda servis, Gaziantep Kawasaki servis, Gaziantep Suzuki servis, motorsiklet lastik, motorsiklet yağ değişimi, motorsiklet arıza, Gaziantep motor revizyon, motorsiklet diagnostik, motorsiklet periyodik bakım, Gaziantep motor yol yardım, motorsiklet uzmanı, profesyonel motorsiklet servis">
+    <meta name="description" content="Gaziantep'in önde gelen motorsiklet uzmanlık merkezi. Detaylı periyodik bakımdan ileri düzey motor onarımına, lastik değişiminden elektrik sistemlerine kadar motorsikletiniz için profesyonel çözümler.">
+    <meta name="keywords" content="Gaziantep motorsiklet servisi, motorsiklet tamir, motorsiklet bakım, Gaziantep Yamaha servis, Gaziantep Honda servis, Gaziantep Kawasaki servis, Gaziantep Suzuki servis, motorsiklet lastik değişimi, motorsiklet yağ değişimi, motorsiklet arıza, Gaziantep motor revizyon, motorsiklet diagnostik, motorsiklet periyodik bakım, Gaziantep motor yol yardım, motorsiklet uzmanı, profesyonel motorsiklet servis">
     <meta name="author" content="Gaziantep Motorsiklet Uzmanlık Merkezi">
     <link rel="canonical" href="http://www.gaziantepmotorsiklets.com/"> 
     
     <meta property="og:title" content="Gaziantep Motorsiklet Uzmanlık Merkezi | Profesyonel Bakım ve Onarım">
-    <meta property="og:description" content="Gaziantep'in önde gelen motorsiklet uzmanlık merkezi. Detaylı periyodik bakımdan ileri düzey motor onarımına, lastik yönetiminden elektrik sistemlerine kadar motorsikletiniz için profesyonel çözümler.">
+    <meta property="og:description" content="Gaziantep'in önde gelen motorsiklet uzmanlık merkezi. Detaylı periyodik bakımdan ileri düzey motor onarımına, lastik değişiminden elektrik sistemlerine kadar motorsikletiniz için profesyonel çözümler.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="http://www.gaziantepmotorsiklets.com/"> 
-    <meta property="og:image" content="https://via.placeholder.com/1200x630/B71C1C/FFFFFF?text=Motorsiklet+Uzmanligi"> 
+    <meta property="og:image" content="https://via.placeholder.com/1200x630/FF5722/FFFFFF?text=Motorsiklet+Uzmanligi"> 
     <meta property="og:locale" content="tr_TR">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -24,13 +24,13 @@
     <style>
         /* Genel Stil Ayarları */
         :root {
-            --primary-color: #E53935; /* Canlı Kırmızı - Dinamizm */
-            --secondary-color: #263238; /* Koyu Gri Mavi - Derinlik ve Sağlamlık */
-            --accent-color: #FFC107; /* Amber - Vurgu ve Enerji */
-            --light-bg: #ECEFF1; /* Açık Gri - Ferahlık */
-            --dark-bg: #1A2024; /* Çok Koyu Mavi Gri - Header, Footer */
+            --primary-color: #FF5722; /* Canlı Turuncu Kırmızı - Enerji ve Dinamizm */
+            --secondary-color: #212121; /* Koyu Siyah Gri - Sağlamlık ve Profesyonellik */
+            --accent-color: #FFC107; /* Amber - Vurgu ve Parlaklık */
+            --light-bg: #F5F5F5; /* Açık Gri - Ferahlık */
+            --dark-bg: #121212; /* Çok Koyu Gri - Header, Footer */
             --text-light: #F8F8F8; /* Açık Metinler */
-            --text-dark: #37474F; /* Koyu Metinler - Sade Okunabilirlik */
+            --text-dark: #424242; /* Koyu Metinler - Sade Okunabilirlik */
             --font-primary: 'Roboto', sans-serif; /* Sade, modern ve okunabilir font */
             --font-secondary: 'Oswald', sans-serif; /* Başlıklar için güçlü, kompakt font */
         }
@@ -92,7 +92,7 @@
         }
 
         .btn-primary:hover {
-            background-color: #C62828; 
+            background-color: #E64A19; 
             transform: translateY(-3px); 
             box-shadow: 0 6px 15px rgba(0,0,0,0.35);
         }
@@ -138,10 +138,24 @@
             align-items: center;
         }
 
+        .logo {
+            position: relative;
+            padding: 5px; /* Logo etrafında boşluk */
+            border-radius: 10px; /* Köşeleri yuvarla */
+            background-color: #FF7043; /* Canlı Turuncu - Logo arka planı */
+            box-shadow: 0 0 15px rgba(255,112,67,0.7); /* Canlı gölge */
+            transition: background-color 0.4s ease, box-shadow 0.4s ease;
+        }
+
+        .logo:hover {
+            background-color: #FF8A65; /* Hover'da daha açık ton */
+            box-shadow: 0 0 25px rgba(255,112,67,0.9);
+        }
+
         .logo img {
-            height: 65px; /* Logo boyutunu sadeleştirdim */
+            height: 65px; 
             transition: transform 0.4s ease-out; 
-            filter: drop-shadow(0 0 8px var(--primary-color)); 
+            filter: drop-shadow(0 0 8px rgba(0,0,0,0.5)); /* Logo gölgesi */
         }
         .logo:hover img {
             transform: scale(1.05); 
@@ -158,11 +172,11 @@
 
         nav ul li a {
             color: var(--text-light);
-            font-weight: 500; /* Daha sade font kalınlığı */
+            font-weight: 500; 
             transition: color 0.3s ease, transform 0.2s ease;
             position: relative;
             padding-bottom: 8px; 
-            font-family: var(--font-primary); /* Sade menü fontu */
+            font-family: var(--font-primary); 
             text-transform: uppercase;
             letter-spacing: 0.8px;
             font-size: 0.95em; 
@@ -203,7 +217,7 @@
 
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://via.placeholder.com/1920x800/212121/FFFFFF?text=Motorsiklet+Performans') no-repeat center center/cover;
+            background: linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.85)), url('https://via.placeholder.com/1920x800/212121/FFFFFF?text=Motorsiklet+Performans') no-repeat center center/cover;
             color: var(--text-light);
             text-align: center;
             padding: 150px 20px; 
@@ -238,7 +252,7 @@
 
         .hero-content h1 {
             font-family: var(--font-secondary);
-            font-size: 3.8em; /* Daha sade font boyutu */
+            font-size: 3.8em; 
             margin-bottom: 25px;
             text-shadow: 3px 3px 8px rgba(0,0,0,0.7); 
             line-height: 1.2;
@@ -248,13 +262,13 @@
         }
 
         .hero-content p {
-            font-size: 1.4em; /* Daha sade font boyutu */
+            font-size: 1.4em; 
             margin-bottom: 45px;
             max-width: 900px;
             margin-left: auto;
             margin-right: auto;
             text-shadow: 2px 2px 5px rgba(0,0,0,0.6);
-            font-weight: 300; /* Daha ince font */
+            font-weight: 300; 
             color: var(--text-light);
             line-height: 1.6;
         }
@@ -262,7 +276,7 @@
         /* Section Başlıkları */
         section h2 {
             font-family: var(--font-secondary);
-            font-size: 3em; /* Daha sade font boyutu */
+            font-size: 3em; 
             text-align: center;
             margin-bottom: 70px; 
             color: var(--secondary-color);
@@ -350,7 +364,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(45deg, rgba(255,255,255,0.03) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.03) 50%, rgba(255,255,255,0.03) 75%, transparent 75%, transparent);
+            background: linear-gradient(45deg, rgba(0,0,0,0.03) 25%, transparent 25%, transparent 50%, rgba(0,0,0,0.03) 50%, rgba(0,0,0,0.03) 75%, transparent 75%, transparent);
             background-size: 15px 15px;
             opacity: 0.1;
             z-index: 0;
@@ -359,7 +373,7 @@
         .service-item:hover {
             transform: translateY(-15px); 
             box-shadow: 0 15px 35px rgba(0,0,0,0.25);
-            background-color: #FDFDFD;
+            background-color: #FFFFFF;
         }
 
         .service-item i {
@@ -367,16 +381,16 @@
             color: var(--primary-color);
             margin-bottom: 25px;
             animation: pulse 1.5s infinite alternate ease-in-out; 
-            filter: drop-shadow(0 0 10px rgba(229,57,53,0.6)); 
+            filter: drop-shadow(0 0 10px rgba(255,87,34,0.6)); 
         }
         @keyframes pulse {
-            0% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(229,57,53,0.5)); }
-            100% { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(229,57,53,0.8)); }
+            0% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(255,87,34,0.5)); }
+            100% { transform: scale(1.05); filter: drop-shadow(0 0 15px rgba(255,87,34,0.8)); }
         }
 
         .service-item h3 {
             font-family: var(--font-secondary);
-            font-size: 1.8em; /* Daha sade font boyutu */
+            font-size: 1.8em; 
             margin-bottom: 15px;
             color: var(--secondary-color);
             font-weight: 600;
@@ -386,9 +400,9 @@
 
         .service-item p {
             color: var(--text-dark);
-            font-size: 1em; /* Daha sade font boyutu */
+            font-size: 1em; 
             line-height: 1.7;
-            font-weight: 400; /* Daha sade font kalınlığı */
+            font-weight: 400; 
         }
 
         /* Why Us Section */
@@ -421,7 +435,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iIzEwMTMxNiIvPgogICAgPGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjEuMiIgZmlsbD0iIzM0NDk1RTkiIG9wYWNpdHk9IjAuMiIvPgogICAgPGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjAuNiIgZmlsbD0iIzQ2NjQ2RSIgb3BhY2l0eT0iMC4zIi8+CiAgICA8L3N2Zz4=');
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNiIgaGVpZ2h0PSI2IiB2aWV3Qm94PSIwIDAgNiA2IiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciPgogICAgPHJlY3Qgd2lkdGg9IjYiIGhlaWdodD0iNiIgZmlsbD0iIzEwMTMxNiIvPgogICAgPGNpcmNsZSBjeD0iMyIgY3k9IjMiIHI9IjEuMiIgZmlsbD0iIzQyNDI0MiIgb3BhY2l0eT0iMC4yIi8+CiAgICA8Y2lyY2xlIGN4PSIzIiBjeT0iMyIgcj0iMC42IiBmaWxsPSIjNjE2MTYxIiBvcGFjaXR5PSIzIi8+CiAgICA8L3N2Zz4=');
             background-size: 6px 6px;
             opacity: 0.2; 
             z-index: 0;
@@ -444,7 +458,7 @@
         }
 
         .why-us-item {
-            background: #37474F; /* Koyu arka plan */
+            background: #303030; /* Koyu arka plan */
             padding: 35px;
             border-radius: 15px;
             box-shadow: 0 8px 25px rgba(0,0,0,0.3); 
@@ -457,7 +471,7 @@
 
         .why-us-item:hover {
             transform: translateY(-15px);
-            background-color: #455A64; 
+            background-color: #424242; 
             box-shadow: 0 15px 35px rgba(0,0,0,0.45);
         }
 
@@ -479,7 +493,7 @@
         }
 
         .why-us-item p {
-            color: #CFD8DC; /* Açık gri metin */
+            color: #E0E0E0; /* Açık gri metin */
             font-size: 1em;
             line-height: 1.7;
             font-weight: 300;
@@ -700,7 +714,7 @@
         .modal-content form select:focus,
         .modal-content form textarea:focus {
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 3px rgba(229, 57, 53, 0.2); 
+            box-shadow: 0 0 0 3px rgba(255, 87, 34, 0.2); 
             outline: none;
         }
         .modal-content form textarea {
@@ -749,9 +763,11 @@
                 justify-content: center;
             }
 
+            .logo {
+                margin-bottom: 10px;
+            }
             .logo img { 
                 height: 55px;
-                margin-bottom: 10px;
             }
 
             nav ul {
@@ -906,8 +922,8 @@
     <main>
         <section id="hero" class="hero-section">
             <div class="hero-content">
-                <h1>Gaziantep Motorsiklet Uzmanlık Merkezi: Performans ve Güvenli Sürüş İçin Adresiniz</h1>
-                <p>Her motorsiklet bir tutkudur. Aracınızın **üst düzey performansını ve yol güvenliğini** sağlamak için Gaziantep'te **profesyonel bakım ve onarım çözümleriyle** yanınızdayız.</p>
+                <h1>Gaziantep Motorsiklet Uzmanlık Merkezi: Yola Güvenle Çıkın</h1>
+                <p>Motorsikletiniz sizin için bir tutku, bizim için ise uzmanlık alanımız. Gaziantep'te aracınızın performansını ve sürüş güvenliğini en üst seviyede tutmak için profesyonel bakım ve onarım hizmetleri sunuyoruz.</p>
                 <a href="#services" class="btn-secondary">Uzman Hizmetlerimizi Keşfedin</a>
             </div>
         </section>
@@ -918,42 +934,42 @@
                 <div class="service-item">
                     <i class="fas fa-motorcycle"></i>
                     <h3>Periyodik Bakım</h3>
-                    <p>**Motorsikletinizin ömrünü uzatır.** Üretici standartlarında, detaylı ve titiz periyodik bakımlarla aracınızın performansını ve güvenilirliğini en üst seviyede tutuyoruz.</p>
+                    <p>Motorsikletinizin uzun ömürlü ve sorunsuz çalışması için üretici standartlarında detaylı periyodik bakımlar yapıyoruz. Her bir kontrol, aracınızın performansını ve güvenilirliğini artırmak içindir.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-tire"></i>
-                    <h3>Lastik Yönetimi</h3>
-                    <p>**Yol tutuşu ve sürüş güvenliği sağlar.** Profesyonel lastik değişimi, hassas balans ayarı ve kapsamlı kontrollerle yolculuklarınızda maksimum güvenlik sunuyoruz.</p>
+                    <h3>Lastik Değişimi ve Yönetimi</h3>
+                    <p>Yol tutuşu ve sürüş güvenliğiniz için lastikler hayati önem taşır. Uzman ekibimiz, lastik değişimi, hassas balans ayarı ve kapsamlı kontrollerle yolculuklarınızda maksimum emniyet sağlar.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-diagnoses"></i>
                     <h3>Arıza Tespiti ve Onarım</h3>
-                    <p>**Sorunlara kesin çözüm sunar.** Son teknoloji diagnostik ekipmanlarımız ve uzman ekibimizle her türlü arızayı doğru tespit edip kalıcı çözümler üretiyoruz.</p>
+                    <p>Motorsikletinizde yaşadığınız her türlü arızayı, son teknoloji diagnostik ekipmanlarımızla doğru bir şekilde tespit ediyor ve kalıcı çözümler üretiyoruz. Sorunları kökünden çözmek için buradayız.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-oil-can"></i>
                     <h3>Yağ ve Filtre Değişimi</h3>
-                    <p>**Motorunuzun kalbini korur.** Motorsikletinize özel, yüksek kaliteli yağlar ve orijinal filtreler kullanarak motorunuzun verimli ve sağlıklı çalışmasını sağlıyoruz.</p>
+                    <p>Motorunuzun kalbi olan yağ ve filtreler, aracınızın sağlığı için kritik öneme sahiptir. Motorsikletinize özel, yüksek kaliteli yağlar ve orijinal filtreler kullanarak motorunuzun verimli ve sağlıklı çalışmasını garantiliyoruz.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-car-battery"></i>
                     <h3>Akü Kontrol ve Değişim</h3>
-                    <p>**Kesintisiz bir başlangıç sunar.** Akü sisteminizi modern cihazlarla analiz ediyor, gerekirse güvenilir ve performanslı akülerle değişimini yapıyoruz.</p>
+                    <p>Motorsikletinizin her zaman ilk marşta çalışması için akü sisteminizi modern cihazlarla analiz ediyoruz. Gerekli durumlarda, güvenilir ve yüksek performanslı akülerle değişimini titizlikle yapıyoruz.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-cogs"></i>
                     <h3>Orijinal Parça Montajı</h3>
-                    <p>**Performansı ve değeri korur.** Aşınmış parçaları, üretici onaylı orijinal veya eşdeğer kalitede yedek parçalarla, titizlikle değiştiriyor ve monte ediyoruz.</p>
+                    <p>Aşınmış veya hasar görmüş parçaları, üretici onaylı orijinal veya eşdeğer kalitede yedek parçalarla değiştiriyoruz. Bu sayede motorsikletinizin orijinal performansını ve değerini koruyoruz.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-lightbulb"></i>
                     <h3>Aydınlatma ve Sinyal Sistemleri</h3>
-                    <p>**Yollarda görünürlüğünüzü artırır.** Far, sinyal ve stop lambalarının kontrolünü, ayarını ve onarımını yaparak gece sürüşlerinizde maksimum güvenlik sağlıyoruz.</p>
+                    <p>Gece sürüşlerinizde ve trafikte görünürlüğünüz için aydınlatma ve sinyal sistemlerinizin sorunsuz çalışması önemlidir. Far, sinyal ve stop lambalarının kontrolünü, ayarını ve onarımını yaparak güvenliğinizi sağlıyoruz.</p>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-wrench"></i>
                     <h3>Aksesuar Entegrasyonu ve Özelleştirme</h3>
-                    <p>**Motorsikletinizi size özel kılar.** Tüm aksesuarlarınızın güvenli ve estetik montajını yapıyor, motorsikletinizi kişisel tarzınıza uygun şekilde özelleştirmenize yardımcı oluyoruz.</p>
+                    <p>Motorsikletinizi kişisel tarzınıza ve ihtiyaçlarınıza göre özelleştirmek ister misiniz? Tüm aksesuarlarınızın güvenli ve estetik montajını yapıyor, aracınızı size özel hale getirmenize yardımcı oluyoruz.</p>
                 </div>
             </div>
         </section>
@@ -965,22 +981,22 @@
                     <div class="why-us-item">
                         <i class="fas fa-helmet-safety"></i>
                         <h3>Uzman Teknik Kadro</h3>
-                        <p>**Yılların deneyimi ve sürekli eğitim.** Motorsikletler konusunda uzmanlaşmış, sektördeki gelişmeleri yakından takip eden sertifikalı teknisyen ekibimizle hizmet veriyoruz.</p>
+                        <p>Motorsikletler konusunda yılların deneyimine sahip, sektördeki en güncel gelişmeleri takip eden sertifikalı teknisyen ekibimizle motorsikletinize en iyi hizmeti sunuyoruz.</p>
                     </div>
                     <div class="why-us-item">
                         <i class="fas fa-shield-alt"></i>
                         <h3>Güvenilir ve Şeffaf Hizmet</h3>
-                        <p>**Her zaman dürüstlük ve açıklık.** Tüm süreçlerde şeffaflığı esas alıyor, işlemler öncesi ve sonrası sizi detaylıca bilgilendirerek güveninizi kazanıyoruz.</p>
+                        <p>Tüm bakım ve onarım süreçlerimizde şeffaflığı esas alıyoruz. İşlemler öncesi ve sonrası sizi detaylıca bilgilendirerek, her adımda güveninizi kazanmayı hedefliyoruz.</p>
                     </div>
                     <div class="why-us-item">
                         <i class="fas fa-tachometer-alt"></i>
                         <h3>Hızlı ve Etkin Çözümler</h3>
-                        <p>**Zamanınız bizim için değerli.** Modern diagnostik cihazlarımız ve optimize edilmiş iş akışımızla sorunları hızla çözüyor, motorsikletinizi en kısa sürede yola hazır hale getiriyoruz.</p>
+                        <p>Zamanınızın değerli olduğunun farkındayız. Modern diagnostik cihazlarımız ve optimize edilmiş iş akışımızla motorsikletinizdeki sorunları hızla çözüyor, sizi en kısa sürede yola hazır hale getiriyoruz.</p>
                     </div>
                     <div class="why-us-item">
                         <i class="fas fa-star"></i>
                         <h3>Müşteri Memnuniyeti Odaklı</h3>
-                        <p>**Sizin memnuniyetiniz önceliğimiz.** Her müşterimizin beklentilerini aşmayı hedefliyor, motorsikletinizle ilgili her konuda en iyi deneyimi yaşatmayı amaçlıyoruz.</p>
+                        <p>Her müşterimizin beklentilerini aşmayı hedefliyor, motorsikletinizle ilgili her konuda en iyi deneyimi yaşatmayı amaçlıyoruz. Sizin memnuniyetiniz bizim için en büyük başarıdır.</p>
                     </div>
                 </div>
             </div>
@@ -1026,7 +1042,7 @@
                 <select id="serviceType" required>
                     <option value="">Lütfen seçiniz</option>
                     <option value="Periyodik Bakım">Periyodik Bakım</option>
-                    <option value="Lastik Yönetimi">Lastik Yönetimi</option>
+                    <option value="Lastik Değişimi ve Yönetimi">Lastik Değişimi ve Yönetimi</option>
                     <option value="Arıza Tespiti ve Onarım">Arıza Tespiti ve Onarım</option>
                     <option value="Yağ ve Filtre Değişimi">Yağ ve Filtre Değişimi</option>
                     <option value="Akü Kontrol ve Değişim">Akü Kontrol ve Değişim</option>

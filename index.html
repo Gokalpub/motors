@@ -155,10 +155,34 @@
             transform: scale(1.05);
             box-shadow: 0 0 15px var(--primary-color);
         }
-        .logo img {
+        
+        .logo-link {
+            display: flex;
+            align-items: center;
+            color: var(--text-light); /* Ensure text color is visible */
+            font-family: var(--font-display);
+            font-size: 1.8em; /* Adjust as needed */
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+        }
+
+        .logo-link:hover {
+            color: var(--primary-color);
+        }
+
+        .logo-link img {
             height: 60px;
             filter: drop-shadow(0 0 5px rgba(0,229,255,0.5));
+            margin-right: 15px; /* Space between logo and text */
         }
+        
+        .logo-text {
+            /* Additional styling for the text if needed */
+            white-space: nowrap; /* Prevent text from wrapping */
+        }
+
 
         nav ul {
             list-style: none;
@@ -233,7 +257,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpewdCb3g9IjAgMCA1MCA1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzAwMDAwMCIvPgogICAgPGNpcmNsZSBjeD0iMjUuMjUiIGN5PSI0LjUiIHI9IjEuMiIgZmlsbD0iIzIyMjIyMiIvPgogICAgPGNpcmNsZSBjeD0iNC41IiBjeT0iMjUuMjUiIHI9IjEuMiIgZmlsbD0iIzIyMjIyMiIvPgogICAgPGNpcmNsZSBjeD0iNDUuNSIgY3k9IjI1LjI1IiByPSIxLjIiIGZpbGw9IiMyMjIyMjIiLz4KICAgIDxjaXJjbGUgY3g9IjI1LjI1IiBjeT0iNDUuNSIgcj0iMS4yIiBmaWxsPSIjMjIyMjIyIi8+CiAgICA8cGF0aCBkPSJNMjUgMTNWNDJIODJWMjlaTTUwIDI2YzEzLjgxIDAgMjUgLTI1IDI1IC0yNUgzMFYyNloiIGZpbGw9IiMwQTFFMkYiIG9wYWNpdHk9IjAuMjUiLz4KPC9zdmc+');
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTAiIGhlaWdodD0iNTAiIHZpZXdCb3g9IjAgMCA1MCA1MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxyZWN0IHdpZHRoPSI1MCIgaGVpZ2h0PSI1MCIgZmlsbD0iIzAwMDAwMCIvPgogICAgPGNpcmNsZSBjeD0iMjUuMjUiIGN5PSI0LjUiIHI9IjEuMiIgZmlsbD0iIzIyMjIyMiIvPgogICAgPGNpcmNsZSBjeD0iNC41IiBjeT0iMjUuMjUiIHI9IjEuMiIgZmlsbD0iIzIyMjIyMiIvPgogICAgPGNpcmNsZSBjeD0iNDUuNSIgY3k9IjI1LjI1IiByPSIxLjIiIGZpbGw9IiMyMjIyMjIiLz4KICAgIDxjaXJjbGUgY3g9IjI1LjI1IiBjeT0iNDUuNSIgcj0iMS4yIiBmaWxsPSIjMjIyMjIyIi8+CiAgICA8cGF0aCBkPSJNMjUgMTNWNDJIODJWMjlaTTUwIDI2YzEzLjgxIDAgMjUgLTI1IDI1IC0yNUgzMFYyNloiIGZpbGw9IiMwQTFFMkYiIG9wYWNpdHk9IjAuMjUiLz4KPC9zdmc+');
             background-size: 50px 50px;
             opacity: 0.15;
             z-index: 0;
@@ -314,7 +338,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIwMCA4MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSI1MCUiIHgyPSIxMDAlIiB5Mj0iNTAlIj4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMUQyNjQxIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxQTMwNTAiIHN0b3Atb3BhY2l0eT0iMC4wNSIvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNhKSIvPgogICAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjAwIiByPSIxNTAiIGZpbGw9IiMwMEU1RkYiIG9wYWNpdHk9IjAuMDgiLz4KICAgIDxjaXJjbGUgY3g9IjgwMCIgY3k9IjYwMCIgcj0iMTcwIiBmaWxsPSIjMDBFNUZGIiBvcGFjaXR5PSIwLjA1Ii8+CiAgICA8Y2lyY2xlIGN4PSIxMDAwIiBjeT0iMTUwIiByPSIxMjAiIGZpbGw9IiMwMEU1RkYiIG9wYWNpdHk9IjAuMDYiLz4KPC9zdmc+');
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTIwMCA4MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CiAgICA8ZGVmcz4KICAgICAgPGxpbmVhckdyYWRpZW50IGlkPSJhIiB4MT0iMCUiIHkxPSI1MCUiIHgyPSIxMDAlIiB5Mj0iNTAlIj4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjAlIiBzdG9wLWNvbG9yPSIjMUQyNjQxIiBzdG9wLW9wYWNpdHk9IjAuMjUiLz4KICAgICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxQTMwNTAiIHN0b3Atb3BhY2l0eT0iMC4wNSIvPgogICAgICA8L2xpbmVhckdyYWRpZW50PgogICAgPC9kZWZzPgogICAgPHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNhIiIvPgogICAgPGNpcmNsZSBjeD0iMjAwIiBjeT0iMjAwIiByPSIxNTAiIGZpbGw9IiMwMEU1RkYiIG9wYWNpdHk9IjAuMDgiLz4KICAgIDxjaXJjbGUgY3g9IjgwMCIgY3k9IjYwMCIgcj0iMTcwIiBmaWxsPSIjMDBFNUZGIiBvcGFjaXR5PSIwLjA1Ii8+CiAgICA8Y2lyY2xlIGN4PSIxMDAwIiBjeT0iMTUwIiByPSIxMjAiIGZpbGw9IiMwMEU1RkYiIG9wYWNpdHk9IjAuMDYiLz4KPC9zdmc+');
             background-size: cover;
             opacity: 0.5;
             z-index: 0;
@@ -698,6 +722,13 @@
                 width: 80px;
                 height: 80px;
             }
+            .logo-link {
+                font-size: 1.5em; /* Adjusted for smaller screens */
+            }
+            .logo-link img {
+                height: 50px; /* Adjusted logo image size for smaller screens */
+                margin-right: 10px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -709,8 +740,11 @@
             .logo {
                 margin-bottom: 10px;
             }
-            .logo img {
-                height: 50px;
+            .logo-link {
+                font-size: 1.3em;
+            }
+            .logo-link img {
+                height: 45px;
             }
             nav ul {
                 display: none;
@@ -806,6 +840,15 @@
                 width: 60px;
                 height: 60px;
             }
+            .logo-link {
+                font-size: 1.1em;
+            }
+            .logo-link img {
+                height: 40px;
+            }
+            .logo-link .logo-text {
+                margin-left: 8px; /* Reduce space for smaller screens */
+            }
         }
     </style>
 </head>
@@ -813,8 +856,9 @@
     <header>
         <div class="container">
             <div class="logo">
-                <a href="#hero" aria-label="Ana Sayfa">
+                <a href="#hero" aria-label="Ana Sayfa" class="logo-link">
                     <img src="https://i.hizliresim.com/anc325k.png?_gl=1*1775g93*_ga*Mjk3NDk0MjcxLjE3NTM3NDMxMDA.*_ga_M9ZRXYS2YN*czE3NTM3NDQ3MjUlajkkbDAkaDA." alt="Gaziantep Motorsiklet Uzmanlık Merkezi Logosu">
+                    <span class="logo-text">Gaziantep Moto</span>
                 </a>
             </div>
             <nav>

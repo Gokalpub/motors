@@ -117,6 +117,7 @@
             background: transparent;
             color: var(--primary-color);
             border: 2px solid var(--primary-color);
+            margin-top: 20px; /* Add margin for spacing from description */
         }
 
         .btn-outline:hover {
@@ -434,6 +435,112 @@
             font-weight: 300;
             position: relative;
             z-index: 1;
+            flex-grow: 1; /* Allow description to take available space */
+        }
+
+        /* Modal Styles */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1001; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+            display: flex; /* Use flexbox for centering */
+            align-items: center; /* Center vertically */
+            justify-content: center; /* Center horizontally */
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+
+        .modal.active {
+            display: flex; /* Show the modal */
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .modal-content {
+            background-color: var(--dark-surface);
+            margin: auto;
+            padding: 30px 40px;
+            border: 1px solid var(--primary-color);
+            border-radius: 15px;
+            width: 90%;
+            max-width: 700px;
+            position: relative;
+            box-shadow: 0 10px 40px rgba(0,229,255,0.4);
+            transform: translateY(20px);
+            transition: transform 0.3s ease;
+            max-height: 90vh; /* Limit modal height */
+            overflow-y: auto; /* Enable scrolling for content if too long */
+        }
+
+        .modal.active .modal-content {
+            transform: translateY(0);
+        }
+
+        .modal-content h3 {
+            font-family: var(--font-display);
+            font-size: 2.2em;
+            color: var(--primary-color);
+            margin-bottom: 25px;
+            text-align: center;
+            position: relative;
+            padding-bottom: 10px;
+            line-height: 1.3;
+        }
+
+        .modal-content h3::after {
+            content: '';
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background-color: var(--accent-color);
+            border-radius: 2px;
+        }
+
+        .modal-content p, .modal-content ul {
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .modal-content ul {
+            list-style-type: disc;
+            padding-left: 30px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+
+        .modal-content ul li {
+            margin-bottom: 8px;
+            color: var(--text-light);
+        }
+
+        .close-button {
+            color: var(--primary-color);
+            font-size: 38px;
+            font-weight: bold;
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            cursor: pointer;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        .close-button:hover,
+        .close-button:focus {
+            color: var(--accent-color);
+            transform: rotate(90deg) scale(1.1);
         }
 
         /* Why Us Section */
@@ -729,6 +836,21 @@
                 height: 50px; /* Adjusted logo image size for smaller screens */
                 margin-right: 10px;
             }
+            .modal-content {
+                width: 95%;
+                padding: 25px;
+            }
+            .modal-content h3 {
+                font-size: 1.8em;
+            }
+            .modal-content p, .modal-content ul {
+                font-size: 0.95em;
+            }
+            .close-button {
+                font-size: 32px;
+                top: 10px;
+                right: 15px;
+            }
         }
 
         @media (max-width: 768px) {
@@ -891,32 +1013,38 @@
                 <div class="service-item">
                     <i class="fas fa-tools"></i>
                     <h3>Kapsamlı Periyodik Bakım</h3>
-                    <p>Motorsikletinizin ömrünü uzatmak ve performansını korumak için fabrika standartlarında detaylı periyodik bakımlar sunuyoruz. Yağ değişimi, filtre kontrolü, zincir bakımı ve genel kontrollerle aracınızın her zaman en iyi durumda olmasını sağlıyoruz.</p>
+                    <p>Motorsikletinizin ömrünü uzatmak ve performansını korumak için fabrika standartlarında detaylı periyodik bakımlar sunuyoruz.</p>
+                    <button class="btn btn-outline" data-modal-target="periodic-maintenance-modal">Daha Fazla Bilgi</button>
                 </div>
                 <div class="service-item">
                     <img src="https://img.icons8.com/ios-filled/100/38FE78/wheel.png" alt="Profesyonel Lastik Servisi İkonu" class="service-icon-img">
                     <h3>Profesyonel Lastik Servisi</h3>
-                    <p>Güvenli sürüşünüz için hayati önem taşıyan lastiklerinizin değişimi, balans ayarı ve rotasyonu işlemlerini son teknoloji ekipmanlarla yapıyoruz. Geniş marka ve model yelpazemizle her motorsiklete uygun çözümler sunuyoruz.</p>
+                    <p>Güvenli sürüşünüz için hayati önem taşıyan lastiklerinizin değişimi, balans ayarı ve rotasyonu işlemlerini son teknoloji ekipmanlarla yapıyoruz.</p>
+                    <button class="btn btn-outline" data-modal-target="tire-service-modal">Daha Fazla Bilgi</button>
                 </div>
                 <div class="service-item">
                     <img src="https://img.icons8.com/ios-filled/100/38FE78/engine.png" alt="Motor ve Şanzıman Onarımı İkonu" class="service-icon-img">
                     <h3>Motor ve Şanzıman Onarımı</h3>
-                    <p>Motorsikletinizin kalbi olan motor ve şanzıman sistemlerinde meydana gelen tüm arızaları, tecrübeli teknisyenlerimizle tespit ediyor ve orijinal yedek parçalar kullanarak titizlikle onarıyoruz. Performans kaybını ortadan kaldırıyoruz.</p>
+                    <p>Motorsikletinizin kalbi olan motor ve şanzıman sistemlerinde meydana gelen tüm arızaları, tecrübeli teknisyenlerimizle tespit ediyor ve orijinal yedek parçalar kullanarak titizlikle onarıyoruz.</p>
+                    <button class="btn btn-outline" data-modal-target="engine-transmission-modal">Daha Fazla Bilgi</button>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-bolt"></i>
                     <h3>Elektrik ve Elektronik Sistemler</h3>
                     <p>Modern motorsikletlerde giderek artan elektronik sistemlerin arıza tespiti ve onarımı konusunda uzmanız. Aküden aydınlatmaya, ECU diagnostikten sensör arızalarına kadar tüm elektrik sorunlarına profesyonel çözümler sunuyoruz.</p>
+                    <button class="btn btn-outline" data-modal-target="electrical-systems-modal">Daha Fazla Bilgi</button>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-car-battery"></i>
                     <h3>Akü Testi ve Değişimi</h3>
-                    <p>Motorsikletinizin her hava koşulunda sorunsuz çalışması için akü sağlığını kontrol ediyor ve gerekli durumlarda yüksek performanslı, uzun ömürlü akülerle değişimini gerçekleştiriyoruz. Marş sorunlarına son veriyoruz.</p>
+                    <p>Motorsikletinizin her hava koşulunda sorunsuz çalışması için akü sağlığını kontrol ediyor ve gerekli durumlarda yüksek performanslı, uzun ömürlü akülerle değişimini gerçekleştiriyoruz.</p>
+                    <button class="btn btn-outline" data-modal-target="battery-service-modal">Daha Fazla Bilgi</button>
                 </div>
                 <div class="service-item">
                     <i class="fas fa-spray-can"></i>
                     <h3>Kozmetik Bakım ve Detaylandırma</h3>
-                    <p>Motorsikletinizin dış görünüşüne de önem veriyoruz. Detaylı temizlik, boya koruma, çizik giderme ve parlatma işlemleriyle aracınızın ilk günkü parlaklığına kavuşmasını sağlıyoruz. Estetikle performansı birleştiriyoruz.</p>
+                    <p>Motorsikletinizin dış görünüşüne de önem veriyoruz. Detaylı temizlik, boya koruma, çizik giderme ve parlatma işlemleriyle aracınızın ilk günkü parlaklığına kavuşmasını sağlıyoruz.</p>
+                    <button class="btn btn-outline" data-modal-target="cosmetic-care-modal">Daha Fazla Bilgi</button>
                 </div>
             </div>
         </section>
@@ -957,7 +1085,7 @@
                         <h3>İletişim Bilgileri</h3>
                         <p><i class="fas fa-map-marker-alt"></i> Adres: 134015. Cadde Ay Yapı Sitesi Altı, 27400 Şahinbey/Gaziantep, Türkiye</p>
                         <p><i class="fas fa-phone-alt"></i> <a href="tel:+905XX XXX XX XX">+90 5XX XXX XX XX</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="mailto:EKLENECEK">EKLENECEK</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@gaziantepmotoservis.com">info@gaziantepmotoservis.com</a></p>
                         <p><i class="fas fa-clock"></i> Çalışma Saatleri: Pazartesi - Cumartesi: 09:00 - 18:00</p>
                     </div>
                 </div>
@@ -968,11 +1096,107 @@
         </section>
     </main>
 
-    <footer>
-        <div class="container">
-            <p>© 2025 Gaziantep Motorsiklet Servisi. Tüm Hakları Saklıdır.</p>
+    <div id="periodic-maintenance-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Kapsamlı Periyodik Bakım Detayları</h3>
+            <p>Motorsikletinizin ömrünü uzatmak ve performansını korumak için fabrika standartlarında detaylı periyodik bakımlar sunuyoruz. Bu bakımlar şunları içerir:</p>
+            <ul>
+                <li>Motor yağı ve filtre değişimi</li>
+                <li>Fren hidroliği kontrolü ve değişimi</li>
+                <li>Zincir temizliği, yağlaması ve gerginlik ayarı</li>
+                <li>Lastik basınçları ve aşınma kontrolü</li>
+                <li>Far, sinyal, stop lambaları ve korna kontrolü</li>
+                <li>Amortisör ve süspansiyon sistemleri kontrolü</li>
+                <li>Debriyaj ve gaz teli ayarları</li>
+                <li>Genel cıvata ve somun sıkılık kontrolleri</li>
+                <li>Akü testi ve bağlantı temizliği</li>
+                <li>Soğutma suyu seviyesi ve antifriz kontrolü</li>
+                <li>Yakıt sistemi ve hortumları kontrolü</li>
+            </ul>
+            <p>Düzenli periyodik bakım, beklenmedik arızaların önüne geçer, yakıt verimliliğini artırır ve sürüş güvenliğinizi en üst seviyede tutar. Motorsikletinizin her zaman en iyi durumda olmasını sağlamak için profesyonel ekibimizle buradayız.</p>
         </div>
-    </footer>
+    </div>
+
+    <div id="tire-service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Profesyonel Lastik Servisi Detayları</h3>
+            <p>Güvenli sürüşünüz için hayati önem taşıyan lastiklerinizin bakımı ve değişimi konusunda uzman hizmetler sunuyoruz:</p>
+            <ul>
+                <li><strong>Lastik Değişimi:</strong> Her marka ve model motorsiklet için geniş yelpazede lastik seçenekleri. Son teknoloji ekipmanlarımızla hızlı ve doğru değişim.</li>
+                <li><strong>Balans Ayarı:</strong> Titreşimi ve lastik aşınmasını azaltmak için bilgisayarlı hassas balans ayarı.</li>
+                <li><strong>Rotasyon ve Basınç Kontrolü:</strong> Lastik ömrünü uzatmak ve sürüş performansını optimize etmek için düzenli rotasyon ve basınç kontrolü.</li>
+                <li><strong>Lastik Tamiri:</strong> Küçük delinmeler ve hasarlar için profesyonel tamir hizmetleri (uygunsa).</li>
+            </ul>
+            <p>Doğru lastik seçimi ve düzenli lastik bakımı, yol tutuşunuzu artırır, fren mesafesini kısaltır ve sürüş konforunuzu yükseltir.</p>
+        </div>
+    </div>
+
+    <div id="engine-transmission-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Motor ve Şanzıman Onarımı Detayları</h3>
+            <p>Motorsikletinizin kalbi olan motor ve şanzıman sistemlerinde meydana gelen her türlü arıza için kapsamlı onarım hizmetleri sunuyoruz:</p>
+            <ul>
+                <li><strong>Motor Revizyonu:</strong> Motorun tüm bileşenlerinin (silindir, piston, krank mili vb.) kontrolü, temizliği ve aşınmış parçaların değişimi.</li>
+                <li><strong>Şanzıman Tamiri:</strong> Vites geçiş problemleri, sesli çalışma veya güç kaybı gibi şanzıman arızalarının giderilmesi.</li>
+                <li><strong>Subap Ayarı ve Conta Değişimi:</strong> Motor performansını etkileyen subap ayarları ve sızıntı yapan contaların değişimi.</li>
+                <li><strong>Yağ Sızıntısı Giderme:</strong> Motor veya şanzımandaki yağ kaçaklarının tespiti ve onarımı.</li>
+                <li><strong>Orijinal Yedek Parça:</strong> Tüm onarım süreçlerinde, uzun ömürlü ve güvenilir sonuçlar için orijinal veya eşdeğer kalitede yedek parçalar kullanıyoruz.</li>
+            </ul>
+            <p>Motor ve şanzımanınızdaki sorunları erken tespit ederek daha büyük masrafların önüne geçiyor, motorsikletinizin performansını ve güvenilirliğini geri kazandırıyoruz.</p>
+        </div>
+    </div>
+
+    <div id="electrical-systems-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Elektrik ve Elektronik Sistemler Detayları</h3>
+            <p>Modern motorsikletlerdeki karmaşık elektrik ve elektronik sistemlerin arıza tespiti ve onarımı konusunda uzmanız:</p>
+            <ul>
+                <li><strong>Diagnostik Testleri:</strong> Bilgisayarlı arıza tespit cihazlarıyla ECU (Motor Kontrol Ünitesi) ve diğer elektronik bileşenlerin detaylı analizi.</li>
+                <li><strong>Kablo Tesisatı Onarımı:</strong> Kısa devre, kopukluk veya korozyon gibi kablo tesisatı sorunlarının giderilmesi.</li>
+                <li><strong>Sensör Değişimi:</strong> Hız, sıcaklık, oksijen gibi kritik sensör arızalarının tespiti ve değişimi.</li>
+                <li><strong>Aydınlatma Sistemleri:</strong> Far, sinyal, stop lambaları, gösterge paneli aydınlatması gibi tüm ışıklandırma problemlerinin giderilmesi.</li>
+                <li><strong>Şarj Sistemi Kontrolü:</strong> Şarj dinamosu (stator/regülatör) ve akü şarj sorunlarının tespiti ve onarımı.</li>
+                <li><strong>Marş Sistemi Onarımı:</strong> Marş motoru ve ilgili bileşenlerdeki sorunların çözümü.</li>
+            </ul>
+            <p>Elektrik sorunları sürüş güvenliğinizi tehlikeye atabilir. Uzman ekibimizle, motorsikletinizin tüm elektronik bileşenlerinin sorunsuz çalışmasını sağlıyoruz.</p>
+        </div>
+    </div>
+
+    <div id="battery-service-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Akü Testi ve Değişimi Detayları</h3>
+            <p>Motorsikletinizin her mevsimde sorunsuz çalışması için akü sağlığı büyük önem taşır. Akü hizmetlerimiz şunları içerir:</p>
+            <ul>
+                <li><strong>Detaylı Akü Testi:</strong> Akünüzün şarj kapasitesi, marş gücü ve genel sağlık durumunu özel test cihazlarıyla belirliyoruz.</li>
+                <li><strong>Akü Şarjı:</strong> Zayıf akülerin uygun yöntemlerle güvenli bir şekilde şarj edilmesi.</li>
+                <li><strong>Akü Değişimi:</strong> Performansı düşen veya ömrünü tamamlamış akülerin, motorsikletinize uygun, yüksek kaliteli ve uzun ömürlü akülerle değişimi.</li>
+                <li><strong>Terminal Temizliği ve Bağlantı Kontrolü:</strong> Akü terminallerindeki korozyonun temizlenmesi ve bağlantıların sağlamlığının kontrolü.</li>
+            </ul>
+            <p>Periyodik akü kontrolleri ve zamanında değişim, beklenmedik arızaların ve yolda kalma durumlarının önüne geçer, motorsikletinizin her zaman kolayca çalışmasını sağlar.</p>
+        </div>
+    </div>
+
+    <div id="cosmetic-care-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h3>Kozmetik Bakım ve Detaylandırma Detayları</h3>
+            <p>Motorsikletinizin sadece mekanik olarak değil, görsel olarak da mükemmel olmasını önemsiyoruz. Kozmetik bakım hizmetlerimizle motorsikletinize parlak ve yeni bir görünüm kazandırıyoruz:</p>
+            <ul>
+                <li><strong>Detaylı Yıkama ve Temizlik:</strong> Motorsikletinizin her köşesi için özel ürünlerle derinlemesine temizlik.</li>
+                <li><strong>Boya Koruma ve Parlatma:</strong> Boya yüzeyindeki mikro çiziklerin giderilmesi, parlaklığın artırılması ve uzun süreli koruma sağlayan cila uygulamaları.</li>
+                <li><strong>Krom ve Metal Parlatma:</strong> Krom kaplı veya metal parçaların özel pastalarla parlatılması ve paslanmaya karşı korunması.</li>
+                <li><strong>Deri ve Plastik Bakımı:</strong> Sele, gidon ve diğer plastik/deri yüzeylerin temizlenmesi, nemlendirilmesi ve korunması.</li>
+                <li><strong>Çizik Giderme:</strong> Yüzeydeki hafif ve orta dereceli çiziklerin profesyonel yöntemlerle giderilmesi.</li>
+            </ul>
+            <p>Motorsikletinizin her zaman göz alıcı görünmesini sağlayarak, sürüş keyfinizi ve aracınızın değerini artırıyoruz.</p>
+        </div>
+    </div>
+
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -995,6 +1219,52 @@
                     }
                 });
             });
+
+            // MODAL İŞLEVSELLİĞİ BAŞLANGICI
+            const modalTriggers = document.querySelectorAll('.service-item .btn-outline');
+            const modals = document.querySelectorAll('.modal');
+            const closeButtons = document.querySelectorAll('.modal .close-button');
+
+            // Modalı açan fonksiyon
+            function openModal(modalId) {
+                const modal = document.getElementById(modalId);
+                if (modal) {
+                    modal.classList.add('active');
+                    document.body.style.overflow = 'hidden'; // Arka plan kaydırmayı engelle
+                }
+            }
+
+            // Modalı kapatan fonksiyon
+            function closeModal(modalElement) {
+                modalElement.classList.remove('active');
+                document.body.style.overflow = 'auto'; // Arka plan kaydırmayı etkinleştir
+            }
+
+            // Butonlara tıklama olaylarını ekle
+            modalTriggers.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modalId = button.dataset.modalTarget;
+                    openModal(modalId);
+                });
+            });
+
+            // Kapatma butonlarına tıklama olaylarını ekle
+            closeButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const modal = button.closest('.modal'); // En yakın .modal öğesini bul
+                    closeModal(modal);
+                });
+            });
+
+            // Modal dışına tıklayınca kapatma
+            modals.forEach(modal => {
+                modal.addEventListener('click', (e) => {
+                    if (e.target === modal) { // Sadece modalın arka planına tıklanırsa kapat
+                        closeModal(modal);
+                    }
+                });
+            });
+            // MODAL İŞLEVSELLİĞİ SONU
 
             // Scroll Animasyonları (Reveal on scroll)
             const observerOptions = {

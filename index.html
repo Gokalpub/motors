@@ -763,6 +763,31 @@
             border: none;
         }
 
+        /* Yol Tarifi Butonu */
+        .directions-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            box-shadow: 0 5px 15px rgba(255,0,0,0.2);
+            text-decoration: none;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 0.9em;
+        }
+
+        .directions-btn:hover {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255,51,51,0.3);
+            color: white;
+        }
+
         /* Footer */
         footer {
             background: linear-gradient(to right, var(--dark-secondary), #1A1A1A);
@@ -972,7 +997,7 @@
             <div class="logo">
                 <a href="#hero" aria-label="Ana Sayfa" class="logo-link">
                     <img src="https://i.hizliresim.com/anc325k.png?_gl=1*1775g93*_ga*Mjk3NDk0MjcxLjE3NTM3NDMxMDA.*_ga_M9ZRXYS2YN*czE3NTM3NDQ3MjUlajkkbDAkaDA." alt="Gaziantep Motorsiklet Uzmanlık Merkezi Logosu">
-                    <span class="logo-text">Gaziantep Moto</span>
+                    <span class="logo-text">Acil Performance</span>
                 </a>
             </div>
             <nav>
@@ -1077,18 +1102,17 @@
                         <h3>İletişim Bilgileri</h3>
                         <p><i class="fas fa-map-marker-alt"></i> Adres: 134015. Cadde Ay Yapı Sitesi Altı, 27400 Şahinbey/Gaziantep, Türkiye</p>
                         <p><i class="fas fa-phone-alt"></i> <a href="tel:+90506 127 22 45">+90 506 127 22 45</a></p>
-                        <p><i class="fas fa-envelope"></i> <a href="</a></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:info@gaziantepmotoservis.com">info@gaziantepmotoservis.com</a></p>
                         <p><i class="fas fa-clock"></i> Çalışma Saatleri: Pazartesi - Cumartesi: 09:00 - 18:00</p>
+                        <a href="https://www.google.com/maps/dir/?api=1&destination=37.018226623535156,37.36680603027344" class="directions-btn" target="_blank">
+                            <i class="fas fa-route"></i> Yol Tarifi Al
+                        </a>
                     </div>
                 </div>
                 <div class="map-container">
-<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.231445373805!2d37.36680603027344!3d37.018226623535156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDAxJzA1LjYiTiAzN8CyMjInMDAuNSJF!5e0!3m2!1str!2str!4v1620000000000!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-
-<div style="margin-top: 10px;">
-   <a href="https://maps.google.com/?q=hedef_adresiniz" target="_blank" style="display: inline-block; padding: 10px 20px; font-size: 16px; color: #fff; background-color: #4285F4; text-decoration: none; border-radius: 5px;">
-  Google Haritalar'da Konumu Gör
-</a>
-</div>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3170.231445373805!2d37.36680603027344!3d37.018226623535156!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzfCsDAxJzA1LjYiTiAzN8CyMjInMDAuNSJF!5e0!3m2!1str!2str!4v1620000000000!5m2!1str!2str" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            </div>
         </section>
     </main>
 
